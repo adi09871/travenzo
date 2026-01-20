@@ -1,12 +1,12 @@
 /* --- COLORS & RESET --- */
 :root {
     --brand-teal: #40E0D0;      
-    --brand-teal-dark: #00695c; /* Darker for text */
-    --brand-teal-light: #e0f2f1; /* BG for box */
+    --brand-teal-dark: #00695c; 
+    --brand-teal-light: #e0f2f1; 
     
     --brand-orange: #ff6b35;    
-    --brand-orange-dark: #c04e22; /* Darker for text */
-    --brand-orange-light: #fff3e0; /* BG for box */
+    --brand-orange-dark: #c04e22; 
+    --brand-orange-light: #fff3e0; 
 
     --brand-brown: #4a3b32;     
     --brand-dark: #0f172a;      
@@ -42,16 +42,23 @@ body {
 .nav-links a:hover { color: var(--brand-teal); }
 .hamburger { display: none; color: white; font-size: 1.5rem; cursor: pointer; }
 
-/* HERO SECTION */
+/* HERO SECTION - NO BLACK SCREEN FIX */
 .hero { 
     height: 100vh; position: relative; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; 
-    background-color: #000; 
+    /* Static Background Image (Visible Instantly) */
+    background-size: cover;
+    background-position: center;
+    background-image: url('https://images.unsplash.com/photo-1621245070059-0524dc865363?auto=format&fit=crop&q=80');
 }
+
 .hero-slider, .slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 .slide {
-    background-size: cover; background-position: center; opacity: 0; 
+    background-size: cover; background-position: center; 
+    opacity: 0; 
     animation: fadeZoom 16s infinite; 
 }
+
+/* Force first slide to be visible instantly */
 .slide:nth-child(1) { animation-delay: 0s; opacity: 1; } 
 .slide:nth-child(2) { animation-delay: 4s; }
 .slide:nth-child(3) { animation-delay: 8s; }
@@ -70,6 +77,7 @@ body {
 .hero-title { font-size: 4.5rem; line-height: 1.1; margin-bottom: 1rem; font-weight: 800; }
 .text-highlight { color: var(--brand-teal); }
 .hero-subtitle { font-size: 1.3rem; margin-bottom: 2.5rem; opacity: 0.9; }
+
 .btn-primary {
     background: var(--brand-orange);
     color: white; padding: 16px 45px; border-radius: 50px; text-decoration: none; font-weight: 600;
@@ -124,7 +132,7 @@ body {
 }
 .gallery-track img:hover { transform: scale(1.03); }
 
-/* PRICING - UPDATED WITH COLORED BACKGROUNDS */
+/* PRICING */
 .pricing-section { padding: 6rem 5%; }
 .pricing-block {
     border-radius: 30px; padding: 4rem 3rem; margin-bottom: 4rem;
@@ -132,47 +140,25 @@ body {
     position: relative; overflow: hidden;
     scroll-margin-top: 120px;
 }
-
-/* JIRANG STYLE */
-.jirang-block { 
-    background-color: var(--brand-teal-light); /* Light Teal BG */
-    border-top: 6px solid var(--brand-teal); 
-}
+.jirang-block { background-color: var(--brand-teal-light); border-top: 6px solid var(--brand-teal); }
 .jirang-block h3 { color: var(--brand-teal-dark); }
-.jirang-block p { color: #555; }
 .jirang-block .reg-fee-box .amount { color: var(--brand-teal-dark); }
 
-/* UTTARAKHAND STYLE */
-.uttarakhand-block { 
-    background-color: var(--brand-orange-light); /* Light Orange BG */
-    border-top: 6px solid var(--brand-orange); 
-}
+.uttarakhand-block { background-color: var(--brand-orange-light); border-top: 6px solid var(--brand-orange); }
 .uttarakhand-block h3 { color: var(--brand-orange-dark); }
-.uttarakhand-block p { color: #555; }
 .uttarakhand-block .reg-fee-box .amount { color: var(--brand-orange-dark); }
 
 .block-header h3 { font-size: 3rem; margin-bottom: 0.5rem; }
-.reg-fee-box { 
-    display: inline-flex; align-items: center; gap: 20px; 
-    background: rgba(255,255,255,0.6); /* Semi-transparent white */
-    padding: 12px 30px; border-radius: 50px; margin-top: 20px; 
-    border: 1px solid rgba(0,0,0,0.05);
-}
+.reg-fee-box { display: inline-flex; align-items: center; gap: 20px; background: rgba(255,255,255,0.6); padding: 12px 30px; border-radius: 50px; margin-top: 20px; border: 1px solid rgba(0,0,0,0.05); }
 .reg-fee-box .amount { font-size: 2rem; font-weight: 800; }
-
 .btn-pay-small { background: var(--brand-dark); color: white; border: none; padding: 10px 20px; border-radius: 30px; cursor: pointer; font-weight: 600; }
 
 .plans-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; margin-top: 3rem; }
-.plan-card { 
-    padding: 2.5rem; border-radius: 20px; border: 1px solid #fff; 
-    background: white; /* Cards remain white to pop against colored BG */
-    transition: 0.3s; box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-}
+.plan-card { padding: 2.5rem; border-radius: 20px; border: 1px solid #fff; background: white; transition: 0.3s; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
 .plan-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
 .plan-card.premium { border: 2px solid var(--brand-teal); }
 .plan-price { font-size: 2.5rem; font-weight: 700; color: var(--brand-brown); }
 .plan-price.highlight { color: var(--brand-orange); }
-
 .price-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid #eee; }
 .btn-pay-action { background: transparent; border: 2px solid var(--text-dark); padding: 10px 25px; border-radius: 10px; cursor: pointer; font-weight: 600; transition: 0.2s; }
 .btn-pay-action:hover { background: var(--text-dark); color: white; }
