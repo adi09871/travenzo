@@ -3,39 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travenzo - Curated Travel Experiences</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Travenzo - Discover India's Hidden Gems</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
     <nav class="navbar">
-        <div class="logo">Travenzo</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#trips">Trips</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="hamburger">
-            <i class="fas fa-bars"></i>
+        <div class="nav-container">
+            <div class="brand">
+                <img src="logo.jpeg" alt="Travenzo Logo" class="nav-logo">
+                <span class="brand-name">Travenzo</span>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#trips">Trips</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
     </nav>
 
     <header id="home" class="hero">
+        <div class="hero-overlay"></div>
+
         <div class="hero-slider">
             <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1518002171953-a080ee802e12?auto=format&fit=crop&q=80');"></div>
             <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&q=80');"></div>
             <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1506038634487-60a69ae45595?auto=format&fit=crop&q=80');"></div>
-             <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80');"></div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80');"></div>
         </div>
-
-        <div class="hero-overlay"></div>
         
         <div class="hero-content">
-            <h1 class="hero-title">Discover India's <br> <span class="text-turquoise">Hidden Gems</span></h1>
-            <p class="hero-subtitle">Experience <span class="text-turquoise">authentic</span> cultural journeys through India's most breathtaking destinations with expert guides.</p>
+            <h1 class="hero-title">Discover India's <br> <span class="text-gradient">Hidden Gems</span></h1>
+            <p class="hero-subtitle">Experience <span class="text-gradient">authentic</span> cultural journeys through India's most breathtaking destinations.</p>
             <div class="hero-buttons">
                 <a href="#trips" class="btn btn-primary">Explore Trips <i class="fas fa-arrow-right"></i></a>
             </div>
@@ -44,18 +51,20 @@
 
     <section id="trips" class="destinations">
         <div class="section-header">
-            <span class="tag">Popular Destinations</span>
+            <span class="tag">Destinations</span>
             <h2>Curated Experiences</h2>
         </div>
         <div class="destination-grid">
-            <div class="dest-card" style="background-image: url('https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&q=80');">
-                <div class="dest-overlay">
+            <div class="dest-card">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&q=80');"></div>
+                <div class="dest-info">
                     <h3>Jirang</h3>
                     <p>Odisha's Hidden Paradise</p>
                 </div>
             </div>
-            <div class="dest-card" style="background-image: url('https://images.unsplash.com/photo-1588414734732-660b07304ddb?auto=format&fit=crop&q=80');">
-                <div class="dest-overlay">
+            <div class="dest-card">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1588414734732-660b07304ddb?auto=format&fit=crop&q=80');"></div>
+                <div class="dest-info">
                     <h3>Uttarakhand</h3>
                     <p>Spiritual Heart of Himalayas</p>
                 </div>
@@ -65,8 +74,8 @@
 
     <section id="pricing" class="pricing-section">
         <div class="container">
-            <div class="section-header white-text">
-                <span class="tag tag-white">Transparent Pricing</span>
+            <div class="section-header">
+                <span class="tag">Pricing Plans</span>
                 <h2>Choose Your Adventure</h2>
             </div>
 
@@ -77,7 +86,7 @@
                     <div class="reg-fee-box">
                         <span class="label">Registration Fee</span>
                         <span class="amount">₹299</span>
-                        <button class="btn-pay-small"><i class="fas fa-credit-card"></i> Pay Now</button>
+                        <button class="btn-pay-small">Pay Now</button>
                     </div>
                 </div>
 
@@ -98,7 +107,7 @@
                     </div>
 
                     <div class="plan-card premium">
-                        <div class="plan-badge">Most Popular</div>
+                        <div class="plan-badge">Popular</div>
                         <div class="plan-header">Premium Booking</div>
                         <div class="price-row">
                             <span class="plan-price">₹1,710</span>
@@ -109,7 +118,7 @@
                         </div>
                         <ul class="plan-features">
                             <li><i class="fas fa-check"></i> Premium accommodation</li>
-                            <li><i class="fas fa-check"></i> Priority support</li>
+                            <li><i class="fas fa-check"></i> Special experiences</li>
                         </ul>
                     </div>
                 </div>
@@ -122,7 +131,7 @@
                     <div class="reg-fee-box">
                         <span class="label">Registration Fee</span>
                         <span class="amount">₹799</span>
-                        <button class="btn-pay-small"><i class="fas fa-credit-card"></i> Pay Now</button>
+                        <button class="btn-pay-small">Pay Now</button>
                     </div>
                 </div>
 
