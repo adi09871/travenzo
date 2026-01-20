@@ -4,55 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travenzo - Discover India's Hidden Gems</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1621245070059-0524dc865363?auto=format&fit=crop&q=80">
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1544100278-32953d666073?auto=format&fit=crop&q=80">
 </head>
 <body>
 
     <nav class="navbar">
-        <div class="nav-container">
+        <div class="nav-wrapper">
             <div class="brand">
-                <img src="logo.jpeg" alt="Travenzo Logo" class="nav-logo">
+                <div class="logo-box"><i class="fas fa-cube"></i></div>
                 <span class="brand-name">Travenzo</span>
             </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#trips">Trips</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="hamburger"><i class="fas fa-bars"></i></div>
+
+            <div class="nav-pill">
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">HOME</a></li>
+                    <li><a href="#trips">TRIPS</a></li>
+                    <li><a href="#pricing">PRICING</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-right">
+                <a href="#pricing" class="btn-book-nav">Book Now</a>
+                <div class="hamburger"><i class="fas fa-bars"></i></div>
+            </div>
         </div>
     </nav>
 
-    <header id="home" class="hero" style="background-image: url('https://images.unsplash.com/photo-1621245070059-0524dc865363?auto=format&fit=crop&q=80');">
-        <div class="hero-overlay"></div>
+    <header id="home" class="hero" style="background-image: url(image.png)">    
+        <div class="hero-overlay-gradient"></div>
         
-        <div class="hero-slider">
-            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1621245070059-0524dc865363?auto=format&fit=crop&q=80');"></div> 
-            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1588414734732-660b07304ddb?auto=format&fit=crop&q=80');"></div> 
-            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&q=80');"></div> 
-            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80');"></div> 
-        </div>
-        
-        <div class="hero-content">
-            <h1 class="hero-title">Discover India's <br> <span class="text-highlight">Hidden Gems</span></h1>
-            <p class="hero-subtitle">Experience <span class="text-highlight">authentic</span> cultural journeys through India's most breathtaking destinations.</p>
+        <div class="hero-content-left">
+            <div class="tag-line"><span class="line-orange"></span> CULTURAL ADVENTURES</div>
+            <h1 class="hero-title">Discover India's <br> Hidden Gems</h1>
+            <p class="hero-subtitle">Experience authentic cultural journeys through India's most breathtaking destinations with expert guides and small groups.</p>
+            
             <div class="hero-buttons">
-                <a href="#trips" class="btn btn-primary">Explore Trips <i class="fas fa-arrow-right"></i></a>
+                <a href="#trips" class="btn-hero-orange">Explore Trips <i class="fas fa-arrow-right"></i></a>
+                <a href="#about" class="btn-hero-outline">Learn More</a>
             </div>
+        </div>
+
+        <div class="hero-curve">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 120L1440 120V0C1200 80 240 80 0 0V120Z" fill="#f8fafc"/>
+            </svg>
         </div>
     </header>
 
     <section id="about" class="about-section">
         <div class="container about-container">
             <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1504194569466-277983c27be5?auto=format&fit=crop&q=80" alt="Traveler">
+                <img src="https://images.unsplash.com/photo-1519112232436-9923c60fd329?auto=format&fit=crop&q=80" alt="Traveler">
                 <div class="exp-badge">
                     <span class="num">5+</span>
                     <span class="text">Years of<br>Experience</span>
@@ -90,10 +98,10 @@
             </a>
             <a href="#uttarakhand-pricing" class="dest-link">
                 <div class="dest-card">
-                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1588414734732-660b07304ddb?auto=format&fit=crop&q=80');"></div>
+                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1584282361657-372e93b45a42?auto=format&fit=crop&q=80');"></div>
                     <div class="dest-info">
                         <h3>Uttarakhand</h3>
-                        <p>Spiritual Heart of Himalayas</p>
+                        <p>Rishikesh & Himalayas</p>
                         <span class="view-btn">View Plans <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </div>
@@ -108,12 +116,12 @@
                 <h2>Memories Across India</h2>
             </div>
             <div class="gallery-track">
-                <img src="https://images.unsplash.com/photo-1588414734732-660b07304ddb?auto=format&fit=crop&q=80" alt="Himalayas">
-                <img src="https://images.unsplash.com/photo-1621245070059-0524dc865363?auto=format&fit=crop&q=80" alt="Monastery">
-                <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&q=80" alt="Fort">
-                <img src="https://images.unsplash.com/photo-1519955025126-ac2369d40139?auto=format&fit=crop&q=80" alt="Forest">
-                <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&q=80" alt="Culture">
-                <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&q=80" alt="Mountains">
+                <img src="https://images.unsplash.com/photo-1605648916361-9bc12ad6a569?auto=format&fit=crop&q=80" alt="Kedarnath">
+                <img src="https://images.unsplash.com/photo-1561585446-7dd38f4f6a81?auto=format&fit=crop&q=80" alt="Varanasi">
+                <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&q=80" alt="Kerala">
+                <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&q=80" alt="Rajasthan">
+                <img src="https://images.unsplash.com/photo-1506461883276-594a12b11cf3?auto=format&fit=crop&q=80" alt="Spiti">
+                <img src="https://images.unsplash.com/photo-1582510003544-524378b1dd33?auto=format&fit=crop&q=80" alt="Temple">
             </div>
         </div>
     </section>
