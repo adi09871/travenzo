@@ -57,19 +57,24 @@ body { background: #f8fafc; color: var(--text-dark); overflow-x: hidden; padding
 }
 .btn-book-nav:hover { background: var(--brand-orange-dark); transform: translateY(-2px); }
 
+/* --- THIS FIXES THE BLUE TEXT ISSUE --- */
 /* Mobile Menu Hidden by Default */
 .hamburger { display: none; color: white; font-size: 1.5rem; cursor: pointer; }
+
 .mobile-menu {
     position: fixed; top: 70px; left: 0; width: 100%;
     background: white; padding: 20px;
     flex-direction: column; gap: 15px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    display: none; /* JS toggles this */
+    display: none; /* IMPORTANT: Hides it initially */
     text-align: center;
+    z-index: 999;
 }
-.mobile-menu.active { display: flex; }
+.mobile-menu.active { display: flex; } /* Shown only when active via JS */
+
 .mobile-menu a { text-decoration: none; color: var(--text-dark); font-weight: 700; font-size: 1.1rem; padding: 10px; display: block; }
 .mobile-btn-book { background: var(--brand-orange); color: white !important; border-radius: 10px; }
+
 
 /* --- HERO SECTION --- */
 .hero { 
@@ -189,7 +194,7 @@ body { background: #f8fafc; color: var(--text-dark); overflow-x: hidden; padding
     padding: 8px 16px; border-radius: 20px; cursor: pointer; font-size: 0.8rem; font-weight: 600;
 }
 
-/* --- MOBILE RESPONSIVENESS (Magic Happens Here) --- */
+/* --- MOBILE RESPONSIVENESS (Fixes layout on phones) --- */
 @media (max-width: 768px) {
     /* Navbar */
     .nav-pill, .nav-right.desktop-only { display: none; }
@@ -216,7 +221,7 @@ body { background: #f8fafc; color: var(--text-dark); overflow-x: hidden; padding
     
     /* Flex rows turn to column on small screens to prevent squeezing */
     .price-row, .full-pay-row, .reg-fee-row, .inst-item {
-        flex-direction: row; /* Keep row for buttons if space allows */
+        flex-direction: row; 
         flex-wrap: wrap;
         gap: 10px;
     }
