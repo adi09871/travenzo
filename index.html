@@ -7,8 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1544100278-32953d666073?auto=format&fit=crop&q=80">
 </head>
 <body>
 
@@ -22,10 +20,7 @@
             <div class="nav-pill">
                 <ul class="nav-links">
                     <li><a href="#home" class="active">HOME</a></li>
-                    <li><a href="#trips">TRIPS</a></li>
                     <li><a href="#pricing">PRICING</a></li>
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
                 </ul>
             </div>
 
@@ -42,11 +37,10 @@
         <div class="hero-content-left">
             <div class="tag-line"><span class="line-orange"></span> CULTURAL ADVENTURES</div>
             <h1 class="hero-title">Discover India's <br> Hidden Gems</h1>
-            <p class="hero-subtitle">Experience authentic cultural journeys through India's most breathtaking destinations with expert guides and small groups.</p>
+            <p class="hero-subtitle">Experience authentic cultural journeys through India's most breathtaking destinations.</p>
             
             <div class="hero-buttons">
-                <a href="#trips" class="btn-hero-orange">Explore Trips <i class="fas fa-arrow-right"></i></a>
-                <a href="#about" class="btn-hero-outline">Learn More</a>
+                <a href="#pricing" class="btn-hero-orange">View Plans <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
 
@@ -56,75 +50,6 @@
             </svg>
         </div>
     </header>
-
-    <section id="about" class="about-section">
-        <div class="container about-container">
-            <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1519112232436-9923c60fd329?auto=format&fit=crop&q=80" alt="Traveler">
-                <div class="exp-badge">
-                    <span class="num">5+</span>
-                    <span class="text">Years of<br>Experience</span>
-                </div>
-            </div>
-            <div class="about-text">
-                <span class="tag">About Us</span>
-                <h2>We Redefine Travel</h2>
-                <p>Travenzo isn't just a travel agency; we are your gateway to the unseen India. We believe in journeys that transform you, connecting you with local cultures and authentic stories.</p>
-                <ul class="about-features">
-                    <li><i class="fas fa-check-circle"></i> Expert Local Guides</li>
-                    <li><i class="fas fa-check-circle"></i> Curated Itineraries</li>
-                    <li><i class="fas fa-check-circle"></i> 24/7 Support</li>
-                </ul>
-                <a href="#contact" class="btn-text">Read More <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <section id="trips" class="destinations">
-        <div class="section-header">
-            <span class="tag">Destinations</span>
-            <h2>Curated Experiences</h2>
-        </div>
-        <div class="destination-grid">
-            <a href="#jirang-pricing" class="dest-link">
-                <div class="dest-card">
-                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1621245070059-0524dc865363?auto=format&fit=crop&q=80');"></div>
-                    <div class="dest-info">
-                        <h3>Jirang</h3>
-                        <p>Odisha's Hidden Paradise</p>
-                        <span class="view-btn">View Plans <i class="fas fa-arrow-right"></i></span>
-                    </div>
-                </div>
-            </a>
-            <a href="#uttarakhand-pricing" class="dest-link">
-                <div class="dest-card">
-                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1588414734732-660b07304ddb?auto=format&fit=crop&q=80');"></div>
-                    <div class="dest-info">
-                        <h3>Uttarakhand</h3>
-                        <p>Rishikesh & Himalayas</p>
-                        <span class="view-btn">View Plans <i class="fas fa-arrow-right"></i></span>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </section>
-
-    <section id="gallery" class="gallery-section">
-        <div class="container gallery-container">
-            <div class="section-header">
-                <span class="tag">Travel Gallery</span>
-                <h2>Memories Across India</h2>
-            </div>
-            <div class="gallery-track">
-                <img src="https://images.unsplash.com/photo-1605648916361-9bc12ad6a569?auto=format&fit=crop&q=80" alt="Kedarnath">
-                <img src="https://images.unsplash.com/photo-1561585446-7dd38f4f6a81?auto=format&fit=crop&q=80" alt="Varanasi">
-                <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&q=80" alt="Kerala">
-                <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&q=80" alt="Rajasthan">
-                <img src="https://images.unsplash.com/photo-1506461883276-594a12b11cf3?auto=format&fit=crop&q=80" alt="Spiti">
-                <img src="https://images.unsplash.com/photo-1582510003544-524378b1dd33?auto=format&fit=crop&q=80" alt="Temple">
-            </div>
-        </div>
-    </section>
 
     <section id="pricing" class="pricing-section">
         <div class="container">
@@ -139,8 +64,10 @@
                     <p>Discover Odisha's hidden paradise</p>
                     <div class="reg-fee-box">
                         <span class="label">Registration Fee</span>
-                        <span class="amount">₹299</span>
-                        <button class="btn-pay-small">Pay Now</button>
+                        <div class="reg-action">
+                            <span class="amount">₹299</span>
+                            <button class="btn-pay-small">Pay Now</button>
+                        </div>
                     </div>
                 </div>
                 <div class="plans-grid">
@@ -150,8 +77,14 @@
                             <span class="plan-price">₹1,499</span>
                             <button class="btn-pay-action">Pay Now</button>
                         </div>
-                        <div class="full-pay-row"><span>Full Payment:</span> <strong>₹4,990</strong></div>
-                        <ul class="plan-features"><li><i class="fas fa-check"></i> Standard accommodation</li><li><i class="fas fa-check"></i> Basic meals included</li></ul>
+                        <div class="full-pay-row">
+                            <div class="fp-text"><span>Full Payment:</span> <strong>₹4,990</strong></div>
+                            <button class="btn-pay-action-small">Pay Now</button>
+                        </div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check"></i> Standard accommodation</li>
+                            <li><i class="fas fa-check"></i> Basic meals included</li>
+                        </ul>
                     </div>
                     <div class="plan-card premium">
                         <div class="plan-badge">Popular</div>
@@ -160,8 +93,14 @@
                             <span class="plan-price">₹1,710</span>
                             <button class="btn-pay-action">Pay Now</button>
                         </div>
-                        <div class="full-pay-row"><span>Full Payment:</span> <strong>₹5,700</strong></div>
-                        <ul class="plan-features"><li><i class="fas fa-check"></i> Premium accommodation</li><li><i class="fas fa-check"></i> Special experiences</li></ul>
+                        <div class="full-pay-row">
+                            <div class="fp-text"><span>Full Payment:</span> <strong>₹5,700</strong></div>
+                            <button class="btn-pay-action-small">Pay Now</button>
+                        </div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check"></i> Premium accommodation</li>
+                            <li><i class="fas fa-check"></i> Special experiences</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -172,8 +111,10 @@
                     <p>Explore the spiritual heart of the Himalayas</p>
                     <div class="reg-fee-box">
                         <span class="label">Registration Fee</span>
-                        <span class="amount">₹799</span>
-                        <button class="btn-pay-small">Pay Now</button>
+                        <div class="reg-action">
+                            <span class="amount">₹799</span>
+                            <button class="btn-pay-small">Pay Now</button>
+                        </div>
                     </div>
                 </div>
                 <div class="plans-grid single-column">
@@ -183,45 +124,39 @@
                             <span class="plan-price highlight">₹7,965</span>
                             <button class="btn-pay-action large">Pay Now</button>
                         </div>
+                        
                         <div class="installment-container">
                             <div class="installment-header"><i class="fas fa-wallet"></i> Installment Options Available</div>
                             <div class="installment-grid">
-                                <div class="inst-item"><span class="inst-label">1st Installment</span><span class="inst-amount">₹10,000</span></div>
-                                <div class="inst-item"><span class="inst-label">2nd Installment</span><span class="inst-amount">₹8,585</span></div>
+                                
+                                <div class="inst-item">
+                                    <div class="inst-info">
+                                        <span class="inst-label">1st Installment</span>
+                                        <span class="inst-amount">₹10,000</span>
+                                    </div>
+                                    <button class="btn-pay-inst">Pay Now</button>
+                                </div>
+
+                                <div class="inst-item">
+                                    <div class="inst-info">
+                                        <span class="inst-label">2nd Installment</span>
+                                        <span class="inst-amount">₹8,585</span>
+                                    </div>
+                                    <button class="btn-pay-inst">Pay Now</button>
+                                </div>
+
                             </div>
                         </div>
-                        <ul class="plan-features"><li><i class="fas fa-check"></i> All transportation included</li><li><i class="fas fa-check"></i> Expert mountain guides</li></ul>
+
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check"></i> All transportation included</li>
+                            <li><i class="fas fa-check"></i> Expert mountain guides</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <footer id="contact" class="modern-footer">
-        <div class="footer-container">
-            <div class="footer-col brand-col">
-                <div class="brand">
-                    <span class="brand-name">Travenzo</span>
-                </div>
-                <p>Curating authentic travel experiences across India's hidden gems.</p>
-                <div class="social-links">
-                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
-            <div class="footer-col links-col">
-                <h4>Quick Links</h4>
-                <ul><li><a href="#home">Home</a></li><li><a href="#about">About Us</a></li><li><a href="#trips">Destinations</a></li><li><a href="#pricing">Pricing Plans</a></li></ul>
-            </div>
-            <div class="footer-col contact-col">
-                <h4>Get in Touch</h4>
-                <ul><li><i class="fas fa-phone"></i> +91 98765 43210</li><li><i class="fas fa-envelope"></i> hello@travenzo.com</li><li><i class="fas fa-map-marker-alt"></i> New Delhi, India</li></ul>
-            </div>
-        </div>
-        <div class="footer-bottom"><p>&copy; 2026 Travenzo. All Rights Reserved.</p></div>
-    </footer>
 
     <script src="script.js"></script>
 </body>
