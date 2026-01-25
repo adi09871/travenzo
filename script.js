@@ -1,46 +1,42 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // Navbar Scroll Logic
+    // Navbar Scroll Effect
     const navbar = document.querySelector('.navbar');
-
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            // Scroll karne par Dark Glassy Class add hogi
             navbar.classList.add('scrolled');
         } else {
-            // Top par wapas Transparent ho jayega
             navbar.classList.remove('scrolled');
         }
     });
 
-    // Smooth Scrolling
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if(target) {
-                target.scrollIntoView({ behavior: 'smooth' });
-            }
-        });
-    });
-
     // Mobile Menu Toggle
     const hamburger = document.querySelector('.hamburger');
-    const navPill = document.querySelector('.nav-pill'); 
+    const mobileMenu = document.querySelector('.mobile-menu');
 
-    if (hamburger) {
+    if (hamburger && mobileMenu) {
         hamburger.addEventListener('click', () => {
-            // Simple toggle for mobile view
-            if (navPill.style.display === 'block') {
-                navPill.style.display = 'none';
+            mobileMenu.classList.toggle('active');
+            
+            // Toggle icon from bars to times (X)
+            const icon = hamburger.querySelector('i');
+            if (mobileMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
             } else {
-                navPill.style.display = 'block';
-                navPill.style.position = 'absolute';
-                navPill.style.top = '80px';
-                navPill.style.right = '20px';
-                navPill.style.flexDirection = 'column';
-                navPill.style.zIndex = '999';
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
             }
         });
     }
+
+    // Close menu when clicking a link
+    document.querySelectorAll('.mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            const icon = hamburger.querySelector('i');
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        });
+    });
 });

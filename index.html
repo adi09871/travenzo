@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travenzo - Discover India's Hidden Gems</title>
+    <title>Travenzo</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -17,6 +17,8 @@
                 <span class="brand-name">Travenzo</span>
             </div>
 
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
+
             <div class="nav-pill">
                 <ul class="nav-links">
                     <li><a href="#home" class="active">HOME</a></li>
@@ -24,14 +26,19 @@
                 </ul>
             </div>
 
-            <div class="nav-right">
+            <div class="nav-right desktop-only">
                 <a href="#pricing" class="btn-book-nav">Book Now</a>
-                <div class="hamburger"><i class="fas fa-bars"></i></div>
             </div>
+        </div>
+        
+        <div class="mobile-menu">
+            <a href="#home">Home</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#pricing" class="mobile-btn-book">Book Now</a>
         </div>
     </nav>
 
-    <header id="home" class="hero" style="background-image: url(image.png);">
+    <header id="home" class="hero" style="background-image: url('image.png');">
         <div class="hero-overlay-gradient"></div>
         
         <div class="hero-content-left">
@@ -43,7 +50,7 @@
                 <a href="#pricing" class="btn-hero-orange">View Plans <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
-
+        
         <div class="hero-curve">
             <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 120L1440 120V0C1200 80 240 80 0 0V120Z" fill="#f8fafc"/>
@@ -58,18 +65,19 @@
                 <h2>Choose Your Adventure</h2>
             </div>
 
-            <div class="pricing-block jirang-block" id="jirang-pricing">
+            <div class="pricing-block jirang-block">
                 <div class="block-header">
                     <h3>Jirang</h3>
                     <p>Discover Odisha's hidden paradise</p>
-                    <div class="reg-fee-box">
-                        <span class="label">Registration Fee</span>
-                        <div class="reg-action">
+                    <div class="reg-fee-row">
+                        <div class="reg-text">
+                            <span class="label">Registration Fee</span>
                             <span class="amount">₹299</span>
-                            <button class="btn-pay-small">Pay Now</button>
                         </div>
+                        <button class="btn-pay-small">Pay Now</button>
                     </div>
                 </div>
+                
                 <div class="plans-grid">
                     <div class="plan-card">
                         <div class="plan-header">Standard Booking</div>
@@ -78,7 +86,9 @@
                             <button class="btn-pay-action">Pay Now</button>
                         </div>
                         <div class="full-pay-row">
-                            <div class="fp-text"><span>Full Payment:</span> <strong>₹4,990</strong></div>
+                            <div class="fp-text">
+                                <span>Full Payment:</span> <strong>₹4,990</strong>
+                            </div>
                             <button class="btn-pay-action-small">Pay Now</button>
                         </div>
                         <ul class="plan-features">
@@ -86,6 +96,7 @@
                             <li><i class="fas fa-check"></i> Basic meals included</li>
                         </ul>
                     </div>
+
                     <div class="plan-card premium">
                         <div class="plan-badge">Popular</div>
                         <div class="plan-header">Premium Booking</div>
@@ -94,7 +105,9 @@
                             <button class="btn-pay-action">Pay Now</button>
                         </div>
                         <div class="full-pay-row">
-                            <div class="fp-text"><span>Full Payment:</span> <strong>₹5,700</strong></div>
+                            <div class="fp-text">
+                                <span>Full Payment:</span> <strong>₹5,700</strong>
+                            </div>
                             <button class="btn-pay-action-small">Pay Now</button>
                         </div>
                         <ul class="plan-features">
@@ -105,18 +118,19 @@
                 </div>
             </div>
 
-            <div class="pricing-block uttarakhand-block" id="uttarakhand-pricing">
+            <div class="pricing-block uttarakhand-block">
                 <div class="block-header">
                     <h3>Uttarakhand</h3>
                     <p>Explore the spiritual heart of the Himalayas</p>
-                    <div class="reg-fee-box">
-                        <span class="label">Registration Fee</span>
-                        <div class="reg-action">
+                    <div class="reg-fee-row">
+                        <div class="reg-text">
+                            <span class="label">Registration Fee</span>
                             <span class="amount">₹799</span>
-                            <button class="btn-pay-small">Pay Now</button>
                         </div>
+                        <button class="btn-pay-small">Pay Now</button>
                     </div>
                 </div>
+
                 <div class="plans-grid single-column">
                     <div class="plan-card featured-card">
                         <div class="plan-header">Total Booking Amount</div>
@@ -124,11 +138,12 @@
                             <span class="plan-price highlight">₹7,965</span>
                             <button class="btn-pay-action large">Pay Now</button>
                         </div>
-                        
+
                         <div class="installment-container">
-                            <div class="installment-header"><i class="fas fa-wallet"></i> Installment Options Available</div>
+                            <div class="installment-header">
+                                <i class="fas fa-wallet"></i> Installment Options
+                            </div>
                             <div class="installment-grid">
-                                
                                 <div class="inst-item">
                                     <div class="inst-info">
                                         <span class="inst-label">1st Installment</span>
@@ -136,7 +151,6 @@
                                     </div>
                                     <button class="btn-pay-inst">Pay Now</button>
                                 </div>
-
                                 <div class="inst-item">
                                     <div class="inst-info">
                                         <span class="inst-label">2nd Installment</span>
@@ -144,13 +158,13 @@
                                     </div>
                                     <button class="btn-pay-inst">Pay Now</button>
                                 </div>
-
                             </div>
                         </div>
 
                         <ul class="plan-features">
                             <li><i class="fas fa-check"></i> All transportation included</li>
                             <li><i class="fas fa-check"></i> Expert mountain guides</li>
+                            <li><i class="fas fa-check"></i> 5N/6D Stay included</li>
                         </ul>
                     </div>
                 </div>
